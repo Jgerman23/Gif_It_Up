@@ -1,3 +1,70 @@
+body{
+    background-color: #202124;
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    background-image: url(../css/space_gif.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(250, 250, 187);
+    font-family: 'Cute Font', cursive;
+    text-align: center;
+    margin-top: 0;
+    padding: 30px;
+    width: 100%;
+    font-size: 7em;
+    border-radius: 0px;
+}
+
 .topic{
-    margin-left: 5px;
+    margin-left: 15px;
+    border-radius: 20px;
+    background-color: rgb(102, 70, 102);
+    color: rgb(250, 250, 187);
+    font-family: 'Cute Font', cursive;
+    font-size: 1.5em;
+}
+
+label{
+    margin-left: 15px;
+    color: rgb(250, 102, 49);
+    font-family: 'Cute Font', cursive;
+    font-size: 2em;
+}
+
+input{
+    margin-left: 15px;
+}
+
+#topic-input{
+    background-color: rgb(102, 70, 102);
+    color: rgb(250, 250, 187);
+    border-radius: 20px;
+    font-family: 'Cute Font', cursive;
+    font-size: 1.5em;
+}
+
+#add-topic{
+    border-radius: 20px;
+    background-color: rgb(102, 70, 102);
+    color: rgb(250, 250, 187);
+    font-family: 'Cute Font', cursive;
+    font-size: 1.5em;
+}
+
+p{
+    color: rgb(250, 102, 49);
+    margin-left: 15px;
+    font-family: 'Cute Font', cursive;
+    font-size: 1.5em;
+}
+
+.gif{
+    margin-left: 15px;
+    border: 2px rgb(102, 70, 102) solid;
+    border-radius: 5px;
 }
