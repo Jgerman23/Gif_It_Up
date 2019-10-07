@@ -16,7 +16,7 @@ h1{
     text-align: center;
     margin-top: 0;
     padding: 30px;
-    width: 100%;
+    width: 96.8%;
     font-size: 7em;
     border-radius: 0px;
 }
@@ -68,4 +68,12 @@ p{
     margin-left: 15px;
     border: 2px rgb(102, 70, 102) solid;
     border-radius: 5px;
+    width: 267px;
+    height: 200px;
+}
+
+.displayedGIf{
+    float: left;
+    text-align: center;
+    margin-left: 25px;
 }

@@ -3,8 +3,9 @@ $(document).ready(function() {
     var topics = ["Rick and Morty", "Batman", "Space", "The Office", "Beagles", "Bob's Burgers", ];
 
     function displayInfo() {
+        $("#gif-view").empty();
         var topic = $(this).attr("topic-name");
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=euSDt6A81v13PssJgeUQWnDSNU1hbYeb&limit=10";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=euSDt6A81v13PssJgeUQWnDSNU1hbYeb&limit=12";
         
         $.ajax({url: queryURL, method: "GET"})
         .then(function(response) {
@@ -14,6 +15,7 @@ $(document).ready(function() {
             for (var i = 0; i < results.length; i++) {
                 console.log(results[i]);
                 var gifDiv = $("<div>");
+                gifDiv.addClass("displayedGIf");
 
                 var rating = results[i].rating;
                 var pRating = $("<p>").text("Rating: " + rating);
@@ -23,6 +25,7 @@ $(document).ready(function() {
 
                 var gifImage = $("<img>");
                 gifImage.addClass("gif");
+                gifImage.addClass("col-md-4");
                 gifImage.attr("src", urlStill);
                 gifImage.attr("data-still", urlStill);
                 gifImage.attr("data-animate", urlPlay);
