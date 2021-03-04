@@ -1,99 +1,228 @@
-body{
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+	background-color: #111314;
+	margin: 0;
+	text-align: center;
+}
+
+h1 {
+	background-image: url(../images/space_gif.gif);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	color: rgb(250, 250, 187);
+	font-family: "Cute Font", cursive;
+	text-align: center;
+	margin: 0 0 35px;
+	padding: 50px 0;
+	width: 100%;
+	height: auto;
+	font-size: 8em;
+	border-radius: 0px;
+}
+
+.content-container {
+    padding: 0 150px;
+    min-height: 100%;
+    margin: 0 auto -120px;
+}
+
+.buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    width: 80%;
+}
+
+.topic {
+	border-radius: 10px;
+	border: 1px solid rgb(250, 250, 187);
+	padding: 5px 25px;
+	background-color: rgb(102, 70, 102);
+	color: rgb(250, 250, 187);
+	font-family: "Cute Font", cursive;
+	font-size: 1.5em;
+	cursor: pointer;
+	transition: 0.4s ease-in-out;
+    margin: 15px 7.5px 0;
+}
+
+.topic:focus {
+	outline: none;
+	background-color: rgb(250, 250, 187);
+	color: rgb(102, 70, 102);
+	border: 1px solid rgb(102, 70, 102);
+}
+.topic:hover {
+	box-shadow: inset 0 0 0 50px rgb(250, 250, 187);
+	color: rgb(102, 70, 102);
+	border: 1px solid rgb(102, 70, 102);
+}
+
+.topic-form-container {
+	margin: 0 0 50px;
+}
+
+.gif-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+    margin: 0 0 26px;
+}
+
+label {
+	margin-left: 15px;
+	color: rgb(250, 102, 49);
+	font-family: "Cute Font", cursive;
+	font-size: 2em;
+}
+
+input {
+	margin-left: 15px;
+}
+
+#topic-input {
+	background-color: rgb(102, 70, 102);
+	color: rgb(250, 250, 187);
+	border-radius: 10px;
+	border: 1px solid rgb(250, 250, 187);
+	padding: 5px 25px;
+	font-family: "Cute Font", cursive;
+	font-size: 1.5em;
+}
+
+#topic-input:focus {
+	outline: none;
+}
+
+#add-topic {
+	border-radius: 10px;
+	background-color: rgb(102, 70, 102);
+	border: 1px solid rgb(250, 250, 187);
+	padding: 5px 25px;
+	color: rgb(250, 250, 187);
+	font-family: "Cute Font", cursive;
+	font-size: 1.5em;
+    cursor: pointer;
+}
+
+#add-topic:hover {
+	box-shadow: inset 0 0 0 50px rgb(250, 250, 187);
+	color: rgb(102, 70, 102);
+	border: 1px solid rgb(102, 70, 102);
+}
+
+p {
+	color: rgb(250, 102, 49);
+	font-family: "Cute Font", cursive;
+	font-size: 1.5em;
+}
+
+.gif {
+	border: 2px rgb(102, 70, 102) solid;
+	border-radius: 5px;
+	width: 267px;
+	height: 200px;
+}
+
+.displayedGIf {
+	text-align: center;
+	margin: 0 12px;
+}
+
+.push {
+    height: 120px;
+}
+
+.giu-footer {
+    height: 120px;
+    width: 100%;
     background-color: #202124;
-    /* position: absolute; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 120px;
+}
+
+h4 {
     margin: 0;
-    /* width: 100%; */
-    /* height: 100%; */
-    text-align: center;
-}
-
-h1{
-    background-image: url(../css/space_gif.gif);
-    background-repeat: no-repeat;
-    background-size: 100%;
+    font-size: 4em;
     color: rgb(250, 250, 187);
-    font-family: 'Cute Font', cursive;
-    text-align: center;
-    margin-top: 0;
-    padding: 30px;
-    /* width: 100%; */
-    font-size: 7em;
-    border-radius: 0px;
+	font-family: "Cute Font", cursive;
 }
 
-.topic{
-    margin-left: 15px;
-    border-radius: 20px;
-    background-color: rgb(102, 70, 102);
-    color: rgb(250, 250, 187);
-    font-family: 'Cute Font', cursive;
-    font-size: 1.5em;
+.github-repo {
+    width: 60px;
+    height: 60px;
+    transition: 0.2s ease-in;
 }
 
-label{
-    margin-left: 15px;
-    color: rgb(250, 102, 49);
-    font-family: 'Cute Font', cursive;
-    font-size: 2em;
+.github-repo:hover {
+    transform: scale(1.2,1.2);
 }
 
-input{
-    margin-left: 15px;
+.github-repo img {
+    width: 100%;
+    height: auto;
 }
 
-#topic-input{
-    background-color: rgb(102, 70, 102);
-    color: rgb(250, 250, 187);
-    border-radius: 20px;
-    font-family: 'Cute Font', cursive;
-    font-size: 1.5em;
-}
-
-#add-topic{
-    border-radius: 20px;
-    background-color: rgb(102, 70, 102);
-    color: rgb(250, 250, 187);
-    font-family: 'Cute Font', cursive;
-    font-size: 1.5em;
-}
-
-p{
-    color: rgb(250, 102, 49);
-    margin-left: 15px;
-    font-family: 'Cute Font', cursive;
-    font-size: 1.5em;
-}
-
-.gif{
-    margin-left: 15px;
-    border: 2px rgb(102, 70, 102) solid;
-    border-radius: 5px;
-    width: 267px;
-    height: 200px;
-}
-
-.displayedGIf{
-    float: left;
-    text-align: center;
-    margin-left: 25px;
-}
-
-@media only screen and (max-width: 600px){
-    .topic{
-        margin-bottom: 10px;
+@media (max-width: 1280px) {
+    .content-container {
+        padding: 0 50px;
     }
 
-    .displayedGIf{
-        margin-left: 50px;
+    .buttons-container {
+        width: 80%;
     }
 }
 
-@media only screen and (max-width: 375px){
-    #add-topic{
-        margin-top: 10px;
+@media (max-width: 1024px) {
+    .content-container {
+        padding: 0 20px;
+    }
+    .buttons-container {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    h1 {
+        font-size: 4em;
+        padding: 25px 0;
     }
 
-    .displayedGIf{
-        margin-left: 40px;
+    .buttons-container {
+        width: 100%;
+    }
+
+    .topic-form-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #add-topic {
+        margin: 15px 15px 0;
+    }
+
+    .giu-footer {
+        padding: 0 20px;
+    }
+
+    h4 {
+        font-size: 2em;
+    }
+
+    .github-repo {
+        width: 30px;
+        height: 30px;
     }
 }

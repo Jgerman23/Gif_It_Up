@@ -13,18 +13,25 @@
 
 <body>
     <h1>GIF IT UP</h1>
-    <div class="container">
-        <div id="buttons-view"></div><br>
-        <form id="topic-form">
-            <label for="topic-input">Add Something</label>
-            <input type="text" id="topic-input">
-            <input id="add-topic" type="submit" value="Submit"><br><br>
-        </form>
+    <div class="content-container">
+        <div class="container">
+            <div class="buttons-container" id="buttons-view"></div>
+            <form class="topic-form-container" id="topic-form">
+                <label for="topic-input">Add Something</label>
+                <input type="text" id="topic-input">
+                <input id="add-topic" type="submit" value="Submit">
+            </form>
+        </div>
+    
+        <div class="container2 gif-container" id="gif-view">     
+        </div>
+        <div class="push"></div>
     </div>
-
-    <div class="container2" id="gif-view">
-            
-    </div>
+    <footer class="giu-footer">
+        <h4>GIF IT UP</h4>
+        <a href="https://github.com/Jgerman23/Gif_It_Up" class="github-repo">
+        <img src="/assets/images/github-logo.png" alt="Github Logo"></a>
+    </footer>
     <script src="assets/javascript/giphy.js"></script>
 </body>
 
