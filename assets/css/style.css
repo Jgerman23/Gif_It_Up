@@ -1,15 +1,20 @@
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-}
-
+html,
 body {
 	background-color: #111314;
 	margin: 0;
 	text-align: center;
+	height: 100%;
+	position: relative;
+}
+
+.main {
+	min-height: 100vh;
+	position: relative;
+	display: block;
 }
 
 h1 {
@@ -28,18 +33,18 @@ h1 {
 }
 
 .content-container {
-    padding: 0 150px;
-    min-height: 100%;
-    margin: 0 auto -120px;
+	padding: 0 150px;
+	/* min-height: 100%; */
+	margin: 0 auto;
 }
 
 .buttons-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 25px;
-    width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto 25px;
+	width: 80%;
 }
 
 .topic {
@@ -52,7 +57,7 @@ h1 {
 	font-size: 1.5em;
 	cursor: pointer;
 	transition: 0.4s ease-in-out;
-    margin: 15px 7.5px 0;
+	margin: 15px 7.5px 0;
 }
 
 .topic:focus {
@@ -75,7 +80,7 @@ h1 {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-    margin: 0 0 26px;
+	margin: 0 0 26px;
 }
 
 label {
@@ -111,8 +116,8 @@ input {
 	color: rgb(250, 250, 187);
 	font-family: "Cute Font", cursive;
 	font-size: 1.5em;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
+	cursor: pointer;
+	transition: 0.3s ease-in-out;
 }
 
 #add-topic:hover {
@@ -121,109 +126,142 @@ input {
 	border: 1px solid rgb(102, 70, 102);
 }
 
+.gif__container {
+	text-align: center;
+	margin: 0 12px;
+	position: relative;
+}
+
+.gif__img-div {
+	border: 2px rgb(102, 70, 102) solid;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden;
+	width: 267px;
+	height: 200px;
+	cursor: pointer;
+}
+
+.gif {
+	width: 100%;
+	height: 200px;
+	transition: 0.3s ease-in-out;
+}
+
+.gif:hover {
+	transform: scale(1.2, 1.2);
+}
+
 p {
 	color: rgb(250, 102, 49);
 	font-family: "Cute Font", cursive;
 	font-size: 1.5em;
 }
 
-.gif {
-	border: 2px rgb(102, 70, 102) solid;
-	border-radius: 5px;
-	width: 267px;
-	height: 200px;
-}
-
-.displayedGIf {
-	text-align: center;
-	margin: 0 12px;
-}
-
 .push {
-    height: 120px;
+	height: 120px;
 }
 
 .giu-footer {
-    height: 120px;
-    width: 100%;
-    background-color: #202124;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 120px;
+	position: absolute;
+	height: 120px;
+	width: 100%;
+	background-color: #202124;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 120px;
+	bottom: 0;
 }
 
-h4 {
-    margin: 0;
-    font-size: 4em;
-    color: rgb(250, 250, 187);
+.footer__text-wrapper {
+	overflow: hidden;
+	position: relative;
+}
+
+h4{
+	margin: 0;
+	font-size: 4em;
+	color: rgb(250, 250, 187);
 	font-family: "Cute Font", cursive;
+	text-decoration: none;
+	transition: all 0.3s ease-out;
+	display: inline-block;
+	height: auto;
+}
+
+.footer__text-wrapper p {
+	margin: 0;
 }
 
 .github-repo {
-    width: 60px;
-    height: 60px;
-    transition: 0.2s ease-in;
+	width: 60px;
+	height: 60px;
+	transition: 0.2s ease-in;
 }
 
 .github-repo:hover {
-    transform: scale(1.2,1.2);
+	transform: scale(1.1, 1.1);
 }
 
 .github-repo img {
-    width: 100%;
-    height: auto;
+	width: 100%;
+	height: auto;
 }
 
 @media (max-width: 1280px) {
-    .content-container {
-        padding: 0 50px;
-    }
+	.content-container {
+		padding: 0 50px;
+	}
 
-    .buttons-container {
-        width: 80%;
-    }
+	.buttons-container {
+		width: 80%;
+	}
 }
 
 @media (max-width: 1024px) {
-    .content-container {
-        padding: 0 20px;
-    }
-    .buttons-container {
-        width: 95%;
-    }
+	.content-container {
+		padding: 0 20px;
+	}
+	.buttons-container {
+		width: 95%;
+	}
 }
 
 @media only screen and (max-width: 767px) {
-    h1 {
-        font-size: 4em;
-        padding: 25px 0;
-    }
+	h1 {
+		font-size: 4em;
+		padding: 25px 0;
+	}
 
-    .buttons-container {
-        width: 100%;
-    }
+	.buttons-container {
+		width: 100%;
+	}
 
-    .topic-form-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+	.topic-form-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 
-    #add-topic {
-        margin: 15px 15px 0;
-    }
+	.gif:hover {
+		transform: none;
+	}
 
-    .giu-footer {
-        padding: 0 20px;
-    }
+	#add-topic {
+		margin: 15px 15px 0;
+	}
 
-    h4 {
-        font-size: 2em;
-    }
+	.giu-footer {
+		padding: 0 20px;
+	}
 
-    .github-repo {
-        width: 30px;
-        height: 30px;
-    }
+	h4 {
+		font-size: 2em;
+	}
+
+	.github-repo {
+		width: 30px;
+		height: 30px;
+	}
 }
